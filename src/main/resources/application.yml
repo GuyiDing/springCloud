@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cloud-eureka-registry-center
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.ip-address}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    ip-address: 127.0.0.1
